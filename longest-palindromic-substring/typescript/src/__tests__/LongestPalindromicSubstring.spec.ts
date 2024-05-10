@@ -10,8 +10,8 @@ describe('longestPalindromicSubstring', () => {
 
     const testCases = [
         ['a', 'a'],
-        ['ac', 'a'],
-        ['babad', 'bab'],
+        ['ac', 'c'],
+        ['babad', 'aba'],
         ['cbbd', 'bb'],
         ['xcvbaabyui', 'baab'],
     ];
