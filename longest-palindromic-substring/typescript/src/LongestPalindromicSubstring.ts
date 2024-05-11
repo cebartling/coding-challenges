@@ -12,7 +12,9 @@ export default function longestPalindromicSubstring(input: string): string {
     let end = 0;
 
     for (let i = 0; i < input.length; i++) {
+        // This will find the longest palindrome with i as the center
         const len1 = expandAroundCenter(input, i, i);
+        // This will find the longest palindrome with the gap between i and i + 1 as the center
         const len2 = expandAroundCenter(input, i, i + 1);
         const len = Math.max(len1, len2);
         if (len > end - start) {

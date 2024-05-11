@@ -1,9 +1,9 @@
-import {beforeEach, describe, vi, it, expect} from 'vitest';
+import {beforeEach, describe, expect, it, vi} from 'vitest';
 import longestPalindromicSubstring from "../LongestPalindromicSubstring.ts";
 
 describe('longestPalindromicSubstring', () => {
 
-    beforeEach(async () => {
+    beforeEach( () => {
         vi.restoreAllMocks();
         vi.resetModules();
     });
@@ -17,8 +17,8 @@ describe('longestPalindromicSubstring', () => {
     ];
 
     describe.each(testCases)('given %s', (input, expected) => {
-        it(`should return ${expected}`, async () => {
-            expect(longestPalindromicSubstring(input)).toBe(expected);
+        it(`should return ${expected}`, () => {
+            expect(longestPalindromicSubstring(input)).toEqual(expected);
         });
     });
 });
